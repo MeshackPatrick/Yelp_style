@@ -1,3 +1,6 @@
+from Review import Review
+
+
 class Restaurant:
     def __init__(self, name):
         self._name = name
@@ -18,7 +21,7 @@ class Restaurant:
     def average_star_rating(self):
         if not self._reviews:
             return 0
-        total_ratings = sum(review.rating()for review in self._reviews)
+        total_ratings = sum(review.rating() for review in self._reviews)
         return total_ratings / len(self._reviews)
 
     def add_review(self, review):
